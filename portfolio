@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio pessoal - Projetos" />
+  <title>FELIPE | Portfólio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a class="brand" href="index.html">FELIPE</a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="index.html">Sobre mim</a></li>
+          <li><a href="formacao.html">Formação</a></li>
+          <li><a href="portfolio.html" class="active">Portfólio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section aria-labelledby="portfolio-titulo">
+      <h1 id="portfolio-titulo">Portfólio</h1>
+      <p>Projetos em destaque. Os cartões abaixo podem apontar para repositórios públicos ou páginas ativas.</p>
+
+      <!-- Grade de projetos -->
+      <div class="cards">
+        <article class="card">
+          <h3 class="card__title">Projeto 1: Jogo da Onca</h3>
+          <p class="card__desc">Versão simples em HTML, CSS e JS, com níveis de dificuldade.</p>
+        
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Projeto 2: Lista de obrigacoes</h3>
+          <p class="card__desc">Lista de tarefas com armazenamento local e filtros.</p>
+        
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Projeto 3: Pagina para Site Cliente</h3>
+          <p class="card__desc">Página responsiva com layout limpo e acessível.</p>
+         
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>&copy; 2026 FELIPE. Todos os direitos reservados.</small>
+      <small>Publicado via GitHub Pages.</small>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal__dialog">
+      <h3 id="modal-title">Mensagem</h3>
+      <p id="modal-message">...</p>
+      <button class="button" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</body>
+</html>
