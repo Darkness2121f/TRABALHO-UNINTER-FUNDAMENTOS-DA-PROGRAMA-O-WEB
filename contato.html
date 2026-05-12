@@ -1,16 +1,82 @@
-<main>
-    <h1>Contato</h1>
-    <form id="formContato">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio pessoal - Contato" />
+  <title>FELIPE | Contato</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a class="brand" href="index.html">FELIPE</a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="index.html">Sobre mim</a></li>
+          <li><a href="formacao.html">Formação</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+  <main class="container main">
+    <section aria-labelledby="contato-titulo">
+      <h1 id="contato-titulo">Contato</h1>
+      <p>Preencha o formulário abaixo. A validação é feita em JavaScript e o envio é simulado.</p>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <!-- Formulário com validação JS -->
+      <form id="contactForm" novalidate>
+        <!-- Comentário: o atributo 'novalidate' permite controlar tudo via JS sem a validação nativa do navegador -->
+        <div class="form-group">
+          <label for="nome"><strong>Nome</strong></label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" />
+          <small class="error" id="erro-nome"></small>
+        </div>
 
-        <button type="submit">Enviar Mensagem</button>
-    </form>
-</main>
-<script src="script.js"></script>
+        <div class="form-group">
+          <label for="email"><strong>E-mail</strong></label>
+          <input type="email" id="email" name="email" placeholder="usuario@dominio.com" />
+          <small class="error" id="erro-email"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem"><strong>Mensagem</strong></label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+          <small class="error" id="erro-mensagem"></small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="button">Enviar</button>
+          <button type="reset" class="button button--ghost">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>&copy; 2026 FELIPE. Todos os direitos reservados.</small>
+      <small>Publicado via GitHub Pages.</small>
+    </div>
+  </footer>
+
+  <!-- Modal de confirmação -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal__dialog">
+      <h3 id="modal-title">Mensagem</h3>
+      <p id="modal-message">...</p>
+      <button class="button" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</body>
+</html>
