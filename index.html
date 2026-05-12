@@ -1,33 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio - Sobre Mim</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio pessoal - Sobre mim" />
+  <title>FELIPE | Sobre mim</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Sobre Mim</a></li>
-                <li><a href="formacao.html">Formação</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header fixo com navegação e botão de tema -->
+  <header class="header">
+    <div class="container header__content">
+      <a class="brand" href="index.html">FELIPE</a>
 
-    <main>
-        <section id="sobre">
-            <h1>Sobre Mim</h1>
-            <p>Olá! Meu nome é FELIPE DE OLIVEIRA, SOU ESTUDANTE DE CIÊNCIA DA COMPUTAÇÃO NA UNINTER.</p>
-            <p>Meus hobbies São assistir séries e filmes de ficção científica, pesquisar sobre novas tecnologias.</p>
-        </section>
-    </main>
+      <!-- Botão hamburguer para mobile -->
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
 
-    <footer>
-        <p>&copy; 2026 - Criado para Atividade Prática UNINTER</p>
-    </footer>
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="index.html" class="active">Sobre mim</a></li>
+          <li><a href="formacao.html">Formação</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+          🌙
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section aria-labelledby="sobre-titulo">
+      <h1 id="sobre-titulo">Sobre mim</h1>
+      <p>
+        Olá! Eu sou o FELIPE. Gosto de séries e filmes de ficção científica. Atualmente estudo Ciência da Computação na Uninter.
+      </p>
+      <h2>Hobbies</h2>
+      <ul class="grid two">
+        <li><strong>Leitura:</strong> tecnologia e ficção científica.</li>
+        <li><strong>Esportes:</strong> corrida e ciclismo.</li>
+        <li><strong>Música:</strong> playlists lo-fi para foco.</li>
+        <li><strong>Projetos:</strong> pequenos apps em JavaScript.</li>
+      </ul>
+
+      <h2>Objetivos</h2>
+      <p>
+        Aprender, crescer e evoluir, construindo soluções úteis, manter boas práticas de código e evoluir meu portfólio.
+          Com projetos que mostrem crescimento técnico e criatividade
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>&copy; 2026 FELIPE. Todos os direitos reservados.</small>
+      <small>Publicado via GitHub Pages.</small>
+    </div>
+  </footer>
+
+  <!-- Modal de mensagens reutilizável -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal__dialog">
+      <h3 id="modal-title">Mensagem</h3>
+      <p id="modal-message">...</p>
+      <button class="button" data-close-modal>Fechar</button>
+    </div>
+  </div>
 </body>
 </html>
